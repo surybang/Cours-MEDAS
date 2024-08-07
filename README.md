@@ -1,9 +1,9 @@
-# Cours-MEDAS
+# Cours-MEDAS 👨‍🎓
 
 Ce repos contient les cours que je dispense aux élèves en Master MEDAS au CNAM.
 
-# EXCEL & Python 
-Module de 42 heures dans lequel nous trouvons une série d'exercices sur Excel.
+# EXCEL & Python 🐍 
+Module de 42 heures dans lequel nous trouvons une série d'exercices sur Excel et Python.
 Dans un premier temps, l'objectif est d'apprendre à maitriser les fonctions les plus utilisées pour l'analyse de données.
 Afin d'obtenir des compétences transverses avec Power BI, nous utiliserons l'ETL intégré, Power Query. 
 
