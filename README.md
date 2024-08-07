@@ -9,7 +9,7 @@ Afin d'obtenir des compétences transverses avec Power BI, nous utiliserons l'ET
 
 Dans un second temps, toujours dans l'objectif de développer des compétences transverses, nous utiliserons Python pour piloter
 un fichier Excel avec la bibliothèque OpenPyxl, nous découvrirons un ensemble de traitements à effectuer avec la bibliothèque Pandas
-pour nettoyer un jeu de données afin d'obtenir un dashboard pour les métiers. 
+pour nettoyer un jeu de données et nous verrons comment le mettre en forme afin d'obtenir un dashboard pour les métiers. 
 
 
 
