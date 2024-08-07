@@ -13,4 +13,8 @@ pour nettoyer un jeu de données afin d'obtenir un dashboard pour les métiers.
 
 
 
+Les corrections seront disponibles après chaque séance sur Moodle 👨‍🏫
+
+
+
 
