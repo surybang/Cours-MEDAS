@@ -1,4 +1,10 @@
+# app.py 
+"""
+Application Streamlit pour tirer au sort un élément parmi une liste d'options.
+"""
+
 import streamlit as st
+import pandas as pd
 from random import choice
 
 st.title("Qui va au tableau ? 👀")
@@ -13,20 +19,17 @@ if "new_option" not in st.session_state:
 if "draw_mode" not in st.session_state:
     st.session_state.draw_mode = "Avec remise"
 
-
 def update_choice() -> None:
     """Ajoute un choix à la liste dans la session"""
     new_choice = st.session_state.new_option.strip()
-    if new_choice and new_choice not in st.session_state.choices:
+    if new_choice not in st.session_state.choices:
         st.session_state.choices.append(new_choice)
     st.session_state.new_option = ""  # Reset du champ après ajout
-
 
 def delete_choice(option: str) -> None:
     """Supprime un choix de la liste dans la session"""
     if option in st.session_state.choices:
         st.session_state.choices.remove(option)
-
 
 def get_random_choice() -> str:
     """Tire un choix aléatoire parmi la liste des choix"""
@@ -37,18 +40,34 @@ def get_random_choice() -> str:
         return selected
     return None
 
+def load_csv(file) -> None:
+    """Charge un fichier CSV et ajoute les choix à la liste"""
+    df = pd.read_csv(file)
+    if df.shape[1] > 0:
+        new_choices = (
+            df.iloc[:, 0]
+            .dropna()
+            .astype(str)
+            .tolist()
+        )
+        st.session_state.choices = list(set(st.session_state.choices + new_choices))
 
 # Interface utilisateur
 with st.expander("⚙️ Gérer les options"):
     st.markdown("Ajoutez, modifiez ou supprimez des options avant de tirer au sort.")
-
+    
+    uploaded_file = st.file_uploader("Importer un fichier CSV", type=["csv"])
+    if uploaded_file:
+        load_csv(uploaded_file)
+        st.success("Fichier CSV chargé avec succès !")
+    
     for option in st.session_state.choices:
         col1, col2 = st.columns([4, 1])
         with col1:
             st.text(option)
         with col2:
             st.button("❌", on_click=lambda opt=option: delete_choice(opt), key=f"del_{option}")
-
+    
     new_option = st.text_input("Ajouter une nouvelle option :", key="new_option")
     st.button("✅ Ajouter", on_click=update_choice)
 
