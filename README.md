@@ -1,11 +1,11 @@
 # Cours-MEDAS 👨‍🎓
 ---
 
-# EXCEL & Python 🐍 
-Module de 42 heures dans lequel nous trouvons une série d'exercices sur Excel et Python.
+# Excel & Git & Python 🐍 
+Module de 42 heures dans lequel nous trouvons une série d'exercices sur Excel, Git et Python.
 Dans un premier temps, l'objectif est d'apprendre à maitriser les fonctions les plus utilisées pour l'analyse de données.
 
-Dans un second temps, dans l'objectif de développer des compétences transverses, nous utiliserons Python pour piloter un fichier Excel avec la bibliothèque OpenPyxl, nous découvrirons un ensemble de traitements à effectuer avec la bibliothèque Pandas
+Dans un second temps, après une présentation de git et de Onyxia SSPCloud, dans l'objectif de développer des compétences transverses, nous utiliserons Python pour piloter un fichier Excel avec la bibliothèque OpenPyxl, nous découvrirons un ensemble de traitements à effectuer avec la bibliothèque Pandas
 pour nettoyer un jeu de données et nous verrons comment le mettre en forme afin d'obtenir un rapport.
 
 Les corrections seront disponibles après chaque séance sur Moodle et ici. 👨‍🏫
